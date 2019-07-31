@@ -1,0 +1,28 @@
+[package]
+name = "borrow_trait"
+version = "0.1.0"
+authors = [ "Luro02 <24826124+Luro02@users.noreply.github.com>" ]
+edition = "2018"
+license = "MIT/Apache-2.0"
+readme  = "readme.md"
+repository = "https://github.com/gnarmagon/borrow_trait"
+description = "Exposes traits for `borrow` and `borrow_mut`."
+keywords = [ "borrow", "refcell" ]
+categories = [ "no-std" ]
+
+[features]
+default = [ "std" ]
+
+std = [ "alloc" ]
+
+# Provide BorrowRef and BorrowRefMut impls for types, that require an allocator
+# like Box<T>, Arc<T> and Rc<T>. This is a subset of std but may be enabled
+# without depending on all of std.
+alloc = []
+
+[dependencies]
+atomic_refcell = { version = "0.1", optional = true }
+cell = { version = "0.1", optional = true }
+
+[package.metadata.docs.rs]
+all-features = true
