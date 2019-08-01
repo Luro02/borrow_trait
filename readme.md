@@ -1,3 +1,7 @@
+[![Build Status](https://api.travis-ci.org/Luro02/borrow_trait.svg?branch=master)](https://travis-ci.org/Luro02/borrow_trait)
+[![Documentation](https://docs.rs/borrow_trait/badge.svg)](https://docs.rs/borrow_trait)
+[![Crates.io](https://img.shields.io/crates/v/borrow_trait.svg)](https://crates.io/crates/borrow_trait)
+
 This library provides traits for `borrow` and `borrow_mut` functions, most commonly found in `RefCell`s. Therefore it is possible to accept other kinds of `RefCell`s like an `AtomicRefCell` or smart pointers around `RefCell`s like `Arc`, `Rc` or `Box`.
 
 ## Example
